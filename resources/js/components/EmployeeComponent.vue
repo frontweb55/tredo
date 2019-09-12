@@ -35,10 +35,10 @@
         <modal name="form"
                height="auto"
                :scrollable="true"
-               width="50%">
+               :adaptive="true">
             <div class="container">
                 <form>
-                    <h2 v-if="editEmployee"> Редактировать данные сотрудника</h2>
+                    <h2 v-if="editId"> Редактировать данные сотрудника</h2>
                     <h2 v-else>Добавить сотрудника</h2>
                     <hr>
                     <div class="alert alert-danger" role="alert" v-if="errorText">

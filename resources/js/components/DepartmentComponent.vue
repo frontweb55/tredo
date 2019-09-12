@@ -29,7 +29,7 @@
         <modal name="form"
                height="auto"
                :scrollable="true"
-               width="50%">
+               :adaptive="true">
             <div class="container">
                 <form>
                     <h2 v-if="editId"> Редактировать отдел</h2>
@@ -171,7 +171,7 @@
                         }
                     })
                     .catch(error => {
-                        if (error.response.status == 400){
+                        if (error.response.status == 403){
                             this.$modal.show('errorModalDepartment');
                         }else{
                             this.$modal.show('errorModal');
